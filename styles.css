@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px;
+  background: #f2f2f2;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.box {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+}
+
+.box.expanded {
+  background: #e8f0fe;
+  transform: scale(1.05);
+}
+
+.options {
+  margin-top: 10px;
+  display: none;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.box.expanded .options {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
